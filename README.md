@@ -1,15 +1,15 @@
 # g_orientation_lock
 
-A new Flutter plugin project.
+Support issue: https://stackoverflow.com/questions/50756091/ios-disabling-landscape-launchscreen-storyboard
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+In AppDelegate.swift:
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+import g_orientation_lock
 
+override func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return SwiftGOrientationLockPlugin.orientationLock
+    }
+```
