@@ -2,6 +2,17 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'g_orientation_lock_method_channel.dart';
 
+enum OrientationMode {
+  portrait("portrait"),
+  portraitUpsideDown("portraitUpsideDown"),
+  allButUpsideDown("allButUpsideDown"),
+  unknown("");
+
+  final String value;
+
+  const OrientationMode(this.value);
+}
+
 abstract class GOrientationLockPlatform extends PlatformInterface {
   /// Constructs a GOrientationLockPlatform.
   GOrientationLockPlatform() : super(token: _token);
@@ -23,7 +34,7 @@ abstract class GOrientationLockPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+  Future<OrientationMode> changeScreenOrientation({required OrientationMode orientationMode}) {
+    throw UnimplementedError('changeScreenOrientation() has not been implemented.');
   }
 }

@@ -10,8 +10,8 @@ class MethodChannelGOrientationLock extends GOrientationLockPlatform {
   final methodChannel = const MethodChannel('g_orientation_lock');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
+  Future<OrientationMode> changeScreenOrientation({required OrientationMode orientationMode}) async {
+    final result = await methodChannel.invokeMethod<String>('change_screen_orientation', orientationMode.value);
+    return OrientationMode.values.firstWhere((element) => element.value == result, orElse: () => OrientationMode.unknown);
   }
 }

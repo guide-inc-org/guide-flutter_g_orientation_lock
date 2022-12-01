@@ -9,7 +9,7 @@ class MockGOrientationLockPlatform
     implements GOrientationLockPlatform {
 
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Future<OrientationMode> changeScreenOrientation({required OrientationMode orientationMode}) async => OrientationMode.portrait;
 }
 
 void main() {
@@ -19,11 +19,11 @@ void main() {
     expect(initialPlatform, isInstanceOf<MethodChannelGOrientationLock>());
   });
 
-  test('getPlatformVersion', () async {
+  test('changeScreenOrientation', () async {
     GOrientationLock gOrientationLockPlugin = GOrientationLock();
     MockGOrientationLockPlatform fakePlatform = MockGOrientationLockPlatform();
     GOrientationLockPlatform.instance = fakePlatform;
 
-    expect(await gOrientationLockPlugin.getPlatformVersion(), '42');
+    expect(await gOrientationLockPlugin.changeScreenOrientation(orientationMode: OrientationMode.portrait), OrientationMode.portrait);
   });
 }

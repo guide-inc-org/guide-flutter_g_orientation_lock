@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - g_orientation_lock (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - g_orientation_lock (from `.symlinks/plugins/g_orientation_lock/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  g_orientation_lock:
+    :path: ".symlinks/plugins/g_orientation_lock/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  g_orientation_lock: ad7f788674a2476ca8acc5b3bcefeea6ab8d66c8
+
+PODFILE CHECKSUM: ef19549a9bc3046e7bb7d2fab4d021637c0c58a3
+
+COCOAPODS: 1.11.3
