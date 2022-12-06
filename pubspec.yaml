@@ -22,3 +22,6 @@ flutter:
     platforms:
       ios:
         pluginClass: GOrientationLockPlugin
+      android:
+        package: inc.guide.g_orientation_lock
+        pluginClass: GOrientationLockPlugin
