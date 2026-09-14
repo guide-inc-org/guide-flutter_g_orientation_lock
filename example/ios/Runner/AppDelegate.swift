@@ -2,7 +2,7 @@ import UIKit
 import Flutter
 import g_orientation_lock
 
-@UIApplicationMain
+@main
 @objc class AppDelegate: FlutterAppDelegate {
     override func application(
         _ application: UIApplication,
